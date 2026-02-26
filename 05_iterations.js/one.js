@@ -9,10 +9,10 @@ for(let i = 0; i <= 10; i++){
 
 //console.log(element); //this line gives an error because element is not in its scope
 
-//nested for loops:
+//nested for loops: //we can use 'i' here also and it won't make problem because the above i is in different scope and below we are making a separate scope
 for(let i = 1; i<=10; i++){
     console.log(`outer loop value: ${i} boooooooooooooom`); //I wrote boooooom so you can find it in the output
-    for(let j = 1; j<= 10; j++){
+    for(let j = 1; j<= 10; j++){ //when making a nested loop so in the inner loop we must not use 'i' as it was used in the outer loop because this inner loop is in the scope of the outer loop
         console.log(`Inner loop value ${j} and inner loop ${i}`);
         console.log(i + '*' + j + '=' + i*j);
     }
@@ -34,7 +34,8 @@ for(let index = 0; index < myArray.length; index++){
 
 
 
- //keyword break and continue:
+ //keyword break and continue: 
+ // we use break because sometimes we don't want the the loop to reach to the maximum length that we have used in the parenthesis of this loop but we want the loop to stop on the basis of some condition
  for(let index = 1; index <= 20; index++){
     if(index == 5){
         console.log(`Detected by 5`);
@@ -70,7 +71,7 @@ for(let index = 0; index < myArray.length; index++){
 
 
  //continue:
-
+//what if we want a specific thing to happen at a specfic index but the after that we want the loop to continue its behaviour normally, so we can use continue
  for(let index =1; index <= 20; index++){
     if(index == 5){
         console.log(`Detected 5`);
