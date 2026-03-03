@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating an element: </title>
+</head>
+<body style="background-color: #212121; color: #fff">
+
+    
+</body>
+
+<script>
+    const div = document.createElement('div');
+    console.log(div);
+
+    div.className = "main";
+
+    div.id = Math.round(Math.random() * 10 + 1);  //just for fun we are putting this random value in id
+
+    div.setAttribute("title", "generated title");  //this will set an attribte called 'title' and give it a value called 'generated value'
+    div.style.backgroundColor = "green";
+    div.style.padding = "12px"
+
+    //There are two ways of putting text in the new element that you created: 
+    //1) use innerText: 
+
+   // div.innerText = "I am new element";
+   
+   //2) or use createTextNode through which you put text on document and store in a variable 
+   //and then append it to the element that you already created
+   const addText = document.createTextNode("Text for new element")
+
+   div.appendChild(addText);
+
+   document.body.appendChild(div);
+
+
+
+</script>
+</html>

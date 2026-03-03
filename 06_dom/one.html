@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class ="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM learning on Chai aur code <span style = "display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit</h2>
+        <h2>Lorem ipsum dolor sit</h2>
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Lorem ipsum dolor sit amet</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
+
+<!-- Check this page on browser and inspect it and then practice these in its console: -->
+ <!--1) document.getElementById('title'); -->
+<!-- it gives you the h1 tag -->
+
+
+
+ <!--2) document.getElementById('title').id -->
+ <!-- it gives 'title' -->
+
+
+
+ <!--3) document.getElementById('title').className -->
+ <!-- it gives: 'heading' -->
+
+
+
+<!--4) document.getElementById('title').getAttribute --> 
+  <!-- ƒ getAttribute() { [native code] }            //looks like didn;t work bcz: -->
+
+   <!-- in getAttribute, you will need to give an attribute and you will get it's value. So, basically, you will pass the key and you will get value in return -->
+
+
+
+    <!--5) document.getElementById('title').getAttribute('id')  -->
+    <!-- gives: 'title' -->
+
+
+
+    <!--6) document.getElementById('title').getAttribute('class') -->
+    <!-- gives: 'heading' -->
+
+
+
+    <!-- Not only get but you can also set an attribute: -->
+     <!-- 7) document.getElementById('title').setAttribute('class', 'test heading')                      //this would replace the value class with test heading and u can see in the elements in browser-->
+
+
+
+
+     <!-- ----------------------------------------------------------------------------------------- -->
+
+
+
+
+
+<!-- 1) document.getElementById('title').getAttribute('class')
+gives: 'heading'
+
+
+2) document.getElementById('title').setAttribute('class', 'test heading')
+gives: undefined but it works
+
+
+3) document.getElementById('title')
+
+4) const title = document.getElementById('title')
+gives: undefined - here we simply place this in a variable called title then we will see in next line that what is in the title
+
+
+5) title
+ gives: <h1 id=​"title" class=​"test heading">​…​</h1>​
+
+
+6) title.style.backgroundColor = 'green' 
+'green' and will change the color to green through our variable
+
+
+7) title.style.padding = '16px' 
+'16px' and this padding will be applied
+
+
+8) title.style.borderRadius = '25px'
+'25px' and the radius will be changed -->
+
+
+
+
+<!-- ------------------------------------------------------------------------------------- -->
+
+
+
+
+<!-- 1) title
+gives: <h1 id=​"title" class=​"test heading" style=​"background-color:​ green;​ padding:​ 16px;​ border-radius:​ 25px;​">​…​</h1>​
+
+2) title.textContent
+gives: 'DOM learning on Chai aur code test text' - this shows u entire content even if u have made it display: none (like we have already in this case)
+
+3) title.innerHTMl
+gives: undefined
+
+4) title.innerHTML
+gives: 'DOM learning on Chai aur code <span style="display: none;">test text</span>' - as you can see this shows html tags so it shows html tags
+
+5) title.innerText
+gives: 'DOM learning on Chai aur code' - inner text shows which is visible on website page
+ -->
+
+
+
+<!--  --------------------------------------------------------------------------------------------------------------- -->
+
+
+
+
+
+<!-- 1) document.querySelector('h2')          - selector works like css selectors- here we did by element
+gives: <h2>​Lorem ipsum dolor sit​</h2>​ 
+
+
+2) document.querySelector('#title')            - # is used for id 
+gives: <h1 id=​"title" class=​"test heading" style=​"background-color:​ green;​ padding:​ 16px;​ border-radius:​ 25px;​">​…​</h1>​
+
+
+3) document.querySelector('.heading')       - dot is used for class
+gives: <h1 id=​"title" class=​"test heading" style=​"background-color:​ green;​ padding:​ 16px;​ border-radius:​ 25px;​">​…​</h1>​
+
+
+4) document.querySelector('input[type = "password"]')   - we can also access the input this way
+gives: <input type=​"password" name id>​
+
+
+
+5)document.querySelector('p:first-child')
+just like how we do selections through css, similarly, we can do it through query selector in javascript -->
+
+
+<!-- ----------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+<!-- You can also change the color of list item that is placed in an unordered list: -->
+
+<!-- 1) document.querySelector('ul')
+gives: <ul>​…​</ul>​
+2) const myul = document.querySelector('ul')
+gives: undefined
+3) myul.querySelector('li')
+gives: <li class=​"list-item">​…​</li>​
+4) const turnGreen = myul.querySelector('li')
+undefined
+5) turnGreen.style.backgroundColor = "green"
+gives: 'green'
+6) turnGreen.style.padding = "10px"
+'10px'
+7) turnGreen.innerText
+gives: 'one'
+8) turnGreen.innerText = "five"
+'five' -->
+
+
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!--  ---------------------------------------- Now, querySelectorAll and the className:------------------------------------------>
+  
+
+
+
+
+
+
+<!-- 
+1) document.querySelectorAll('li')          - this is how queryselectorall works
+gives: NodeList(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+
+2) const tempLiList =document.querySelectorAll('li')            - this puts a nodelist in the variable that we created. Basically, querySelectorAll 
+                                                                   returns a nodelist which behaves like an array but it is nt an array as we don't have map in its prototype, 
+                                                                   therefore we must convert it to array if we want to use map
+gives: undefined
+
+
+3) tempLiList                                                           - as u can see it shows a nodelist
+gives: NodeList(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+
+4) tempLiList.style.color = 'green'                                                     - here, we are doing manipulation through our variable but gives error as we must give an index since it it is a nodelist
+gives: VM430:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+    at <anonymous>:1:24
+(anonymous) @ VM430:1Understand this error
+
+
+5) tempLiList[0].style.color = 'red'                                                      -here, it shows how red color was applied
+gives: 'red'
+
+
+6) tempLiList.forEach(function (l) {l.style.backgroundColor = 'green'})                             - here, we are using foreach loop to make all the items of this nodelist as green
+gives: undefined
+-->
+
+
+
+
+
+
+
+
+<!-- --------------------------------------------------------one more example of using querySelectorAll------------------------------------------------------------------------------------------ -->
+
+
+
+
+<!-- 1) const myH1 = document.querySelectorAll('h1')
+undefined
+
+2) myH1
+NodeList [h1#title.heading]
+
+3)myH1[0].style.color = 'green'
+'green' -->
+
+
+
+
+
+
+<!-- --------------------------------------------------------------------------------className--------------------------------------------------------------------- -->
+
+
+
+
+<!-- 1) const tempClassList = document.getElementsByClassName('list-item')                -making  a variable and putting className in it so that we can we can do manipulation through it
+gives: undefined
+
+
+2) tempClassList                                                                      -As you can see it returns an HTML collection which is not array, forEach and map both are not in its prototype therefore, we must convert it array
+gives: HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+
+3) tempClassList.forEach(function (li) {console.log(li)})                              -Thus gives error, when using forEach for it
+gives: VM1272:1 Uncaught TypeError: tempClassList.forEach is not a function
+        at <anonymous>:1:15
+        (anonymous) @ VM1272:1Understand this error
+
+
+4) Array.from(tempClassList)                                                           -This is how e convert it to an array
+gives: (4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+
+5) const myConvertedArray = Array.from(tempClassList)                                  -But we will have to store it in a variable while converting it to an array
+gives: undefined
+
+ 
+6) myConvertedArray.forEach(function (li){li.style.color = 'orange'})                  -Then we can use forEach on that variable
+gives: undefined
+
+
+7) myH1.forEach(function (h) {
+    h.style.color = 'blue';
+    h.style.backGroundColor = 'pink';
+    h.style.padding = '10px';
+    h.innerText = "Komal is working"
+})
+gives: undefined -->
+
+
+
+
+
+<!-- =========================================================================================================================================================== -->
+
+<!-- DOM tree representation of above code (the html code I wrote in the start): -->
+
+<!-- DOM Tree Representation:
+Document
+│
+└── html (lang="en")
+    │
+    ├── head
+    │   ├── meta (charset="UTF-8")
+    │   ├── meta (name="viewport")
+    │   ├── title
+    │   │    └── "DOM learning"
+    │   └── style
+    │        └── .bg-black { background-color: #212121; color: #fff; }
+    │
+    └── body (class="bg-black")
+        │
+        └── div
+            │
+            ├── h1 (id="title", class="heading")
+            │    ├── "DOM learning on Chai aur code "
+            │    └── span (style="display: none;")
+            │          └── "test text"
+            │
+            ├── h2
+            │    └── "Lorem ipsum dolor sit"
+            │
+            ├── h2
+            │    └── "Lorem ipsum dolor sit"
+            │
+            ├── h2
+            │    └── "Lorem ipsum dolor sit"
+            │
+            ├── p
+            │    └── "Lorem ipsum dolor sit amet"
+            │
+            ├── input (type="password")
+            │
+            └── ul
+                ├── li (class="list-item") → "one"
+                ├── li (class="list-item") → "two"
+                ├── li (class="list-item") → "three"
+                └── li (class="list-item") → "four" -->
+
+<!-- 
+🧠 Important DOM Concepts From This
+document is the root.
+html is the main element.
+head and body are children of html.
+h1 has:
+a text node
+a span child
+The <span> text is hidden because of display: none, but it still exists in the DOM.
+The <ul> contains 4 <li> elements as children. -->
+
+
+
+    <!-- For practice, you can write those in console of the browser: (I am inspecting on wikipedia): -->
+
+<!-- 1) console.log(document.baseURI)   -->
+    <!-- output: https://www.wikipedia.org/ -->
+
+
+
+<!--2) console.log(document.links) -->
+    <!--this gives an entire collection of links which is not array but html collection-->
+
+
+
+<!--3) console.log(document.links[2]) -->
+<!-- this give the specfic link whose index you used, even though it is not an array but a collection of html anchor tags. -->
+
+
+
+<!-- 4) document.getElementById('js-link-box-de') -->
+<!-- this will return an anchor tag that has link wiht this specific id -->
+
+
+
+<!--5) document.getElementById('js-link-box-de').innerHTML = "<h1>Chai aur Code </h1>" -->
+<!-- And this is how you do dom manipulation -->

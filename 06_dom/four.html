@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>using a function to create an element 'list-item' & edit and remove</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+
+    <ul class="language">
+        <li>Javascript</li> 
+        <!-- Now, we will write javacript code to add an element through a function: -->
+    </ul>
+    
+</body>
+
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`;
+        document.querySelector('.language').appendChild(li);
+    }
+
+    addLanguage("python"); //this will add "python" as list item in the unordered list
+    addLanguage("typescript"); //this will add "typescript" as list item in the unordered list
+
+
+    //Let's try a different and more optimized way to add a list item by using createTextNode instead of using innerHTMl:
+
+    function addOptiLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLanguage('golang');
+
+</script>
+</html>
