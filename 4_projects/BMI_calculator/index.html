@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css"
 </head>
 <body>
 
@@ -13,9 +14,10 @@
         <a target="_blank" href="youtube.com">Youtube</a>
      </nav>
 
-     <!-- Now, we will make a container div, inside which we will have inputa for height and weight and a button:  -->
+     <!-- Now, we will make a container div, inside which we will have a form (inputs for height and weight and a button):  -->
 
-     
+     <div class="container"> 
+      <h1>BMI calculator</h1>
      <form>
         <p><label>Height in cm: </label> <input type="text" id="height"/></p>
         <p><label>Weight in kg: </label><input type="text" id="weight"/></p>
@@ -32,6 +34,8 @@
             <p>Overweight = Greater than 24.9</p>
          </div>
      </form>
+
+     </div>
 </body>
 
 <script src="script.js"></script>
