@@ -24,14 +24,13 @@ form.addEventListener('submit', function (e) {
 
     else {
         const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+        //toFixed(2): It's a JavaScript number method that rounds the result to 2 decimal places and returns it as a string.
         //in this same scope right after calculating the bmi value, we need to show the result too:
 
         results.innerHTML = `<span>${bmi}</span>`
 
 
     }
-
-
-
+    
 
 });

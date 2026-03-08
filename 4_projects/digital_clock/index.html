@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Local Time</title>
+    <!-- using internal css for styling:  -->
+     <style>
+        body {
+            background-color: #212121;
+            color: #fff;
+        }
+
+        .center {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #clock {
+            font-size: 40px;
+            background-color: orange;
+            padding: 20px 50px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+     </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <a href="/" aria-current="page">Home</a>
+        <!-- explanation to above line of code:
+         <a> — the anchor tag, used to create clickable links.
+        href="/" — the destination of the link. / means the homepage (root) of the website.
+        aria-current="page" — this is an accessibility attribute. It tells screen readers "this link is the 
+        currently active page". It's useful for visually impaired users so their screen reader announces "Home, current page" instead of just "Home". -->
+
+        <a target="_blank" href="youtube.com">Youtube channel</a>
+        <!-- target="_blank" — tells the browser to open the link in a new tab (or new window) -->
+    </nav>
+
+    <!-- Now, let's make a div inside which: two divs, one for text we place text in it and another for clock to show the time -->
+
+    <div class="center">
+        <div id="banner"><span>Your local time</span></div>
+
+        <div id="clock"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
