@@ -1,5 +1,19 @@
 //Two types of datatypes:
+
+
 //1) Primitive: when such variable is used in some other variable it gives it the copy of that value therefore any change in the second variable won't affect the first copy:
+// Primitive Data Types:
+// A primitive is a single, simple value. It cannot hold multiple values or properties.
+// Think of it as one piece of information.
+
+// JavaScript has 7 primitive data types:
+// 1) String
+// 2) Number
+// 3) Boolean
+// 4) Undefined
+// 5) Null
+// 6) Symbol
+// 7) BigInt
 //a) string: 
 //b) Number:
 const score = 100
@@ -20,6 +34,14 @@ console.log(typeof anotherId);
 const bigNumber = 3456543576654356754n
 
 //2) Reference (non primitive): when we are allocated the reference of it in the memory: therefore the change in a variable that refers to an original value will change both:
+// Non-Primitive Data Types:
+// A non-primitive can store multiple values and has properties and methods.
+// Think of it as a container that can hold many pieces of information.
+
+// The main non-primitive types are:
+// Object
+// Array (which is a special kind of object)
+// Function (also a special kind of object)
 //a) Array:
 const heros = ["shaktiman", "naagraj", "doga"];
 //b) object: 
