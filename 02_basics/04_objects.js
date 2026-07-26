@@ -2,6 +2,8 @@
 const tinderUser1 = new Object(); //a singleton object
 const tinderUser2 = {}; //not a singleton object
 
+//Every time you write {}, JavaScript creates a new object.
+
 console.log(tinderUser1); //gives: {}
 console.log(tinderUser2); //gives: {}
 
