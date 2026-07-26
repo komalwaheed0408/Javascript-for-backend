@@ -3,6 +3,12 @@
 // const user2 = {}
 // you get two different objects in memory. So it’s not a singleton.
 
+// One-line definition to remember:
+// A singleton is an object that is created only once and shared everywhere in the program.
+// For now, while you're learning JavaScript, just remember:
+// {} → creates a new object every time.
+// Singleton → only one object exists and everyone shares it.
+
 // new Object() → creates normal object
 // {} → literal object (same as above)
 // Object.create(proto) → creates new object with a specific prototype
