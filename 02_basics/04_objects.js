@@ -4,6 +4,18 @@ const tinderUser2 = {}; //not a singleton object
 
 //Every time you write {}, JavaScript creates a new object.
 
+// A real singleton means:
+// The object is created only once.
+// Everyone uses that same object.
+// For example:
+// const settings = new Object();
+// // Later...
+// const appSettings = settings;
+// const userSettings = settings;
+// console.log(appSettings === userSettings); // true
+// Both variables point to the same object.
+
+    
 console.log(tinderUser1); //gives: {}
 console.log(tinderUser2); //gives: {}
 
